@@ -286,4 +286,25 @@ display(percentual_c.round(2))
 # ## INSIGHT
 # Analisando os dados de compras dos segmentos por categoria, é possível notar que todos são liderados por Alimentos, presente em mais de 98% das comprs, seguido por Higiene, com percentuais em torno de 95%, e Limpeza, com aproximadamente 94%. A ordem das categorias se mantém semelhante entre os segmentos, apresentando apenas algumas variações nos percentuais das demais categorias. Isso demonstra que apesar de pertecerem a segmentos econômicos diferentes, os clientes apresentam um padrão semelhante em relação às categorias presentes em suas compras.
 
+# CONCLUSÕES FINAIS
 
+# 1. Apesar da média ser de aproximadamente 1,14 filho por cliente,
+# a mediana e a moda são iguais a zero, demonstrando que pelo menos
+# metade dos clientes da base não possui filhos.
+
+# 2. O segmento B apresentou a maior quantidade de clientes e de compras.
+# Porém, o segmento C apresentou a maior média de compras por cliente,
+# com aproximadamente 18,95 compras.
+
+# 3. Alimentos apresentou o maior percentual entre as categorias analisadas
+# nos três segmentos econômicos, seguido por Higiene e Limpeza, mantendo
+# um comportamento semelhante entre os segmentos.
+
+# 4. As mulheres representam a maior quantidade de clientes e realizaram
+# mais compras. Porém, a média de compras por cliente apresentou pouca
+# diferença entre mulheres (18,53) e homens (18,41).
+
+# 5. Foram identificados registros duplicados, porém optei por mantê-los,
+# pois a base não informa a quantidade de unidades adquiridas. Dessa forma,
+# não é possível confirmar se são duplicidades indevidas ou compras de
+# mais de uma unidade do mesmo produto.
