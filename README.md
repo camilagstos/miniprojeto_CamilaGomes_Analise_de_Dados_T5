@@ -6,6 +6,7 @@ Este miniprojeto foi desenvolvido com o objetivo de realizar uma análise explor
 
 A análise foi realizada inicialmente através da leitura e verificação dos dados, seguida pela conversão para DataFrame, limpeza e padronização das informações. Após essa etapa, foram realizadas análises buscando entender melhor o perfil dos clientes e seus comportamentos de compra.
 
+
 ## Tecnologias utilizadas
 
 - Python
@@ -16,55 +17,48 @@ A análise foi realizada inicialmente através da leitura e verificação dos da
 - Jupyter Notebook
 - VS Code
 
+
 ## Etapas realizadas
 
 Durante o desenvolvimento do projeto foram realizadas as seguintes etapas:
 
-- Leitura da base de dados;
-- Verificação da estrutura e dos tipos dos dados;
+- Leitura da base CSV utilizando `DictReader`;
 - Conversão dos dados para DataFrame;
-- Padronização dos nomes das colunas;
-- Verificação de valores nulos, vazios e espaços extras;
-- Conversão dos tipos de dados quando necessário;
+- Verificação da estrutura e qualidade dos dados;
+- Padronização das colunas e tratamento de valores ausentes;
+- Conversão dos tipos de dados, incluindo a coluna de data para `datetime`;
 - Verificação e análise dos registros duplicados;
-- Análise das informações dos clientes;
-- Análise do comportamento de compras por segmento econômico;
-- Análise das categorias de produtos;
-- Análise da frequência de compras por gênero;
-- Análise da frequência de compras por estado civil e presença de filhos.
+- Aplicação de estatísticas descritivas;
+- Agrupamentos para análise do perfil dos clientes e comportamento de compra.
+
 
 ## Principais análises e insights
 
-Ao analisar a quantidade de filhos por cliente, foi possível perceber que, apesar da média ser de aproximadamente 1,14 filho por cliente, a mediana e a moda demonstram que pelo menos metade dos clientes da base não possui filhos.
+A análise mostrou que, apesar da média de filhos ser de aproximadamente 1,14 por cliente, a mediana e a moda demonstram que pelo menos metade dos clientes não possui filhos.
 
-Na análise dos segmentos econômicos, o segmento B possui o maior número de clientes e também a maior quantidade de compras. Porém, ao calcular a média de compras por cliente, o segmento C apresentou uma frequência de compras um pouco maior.
+O segmento B possui o maior número de clientes e de compras. Porém, ao analisar a média de compras por cliente, o segmento C apresentou uma frequência um pouco maior.
 
-Em relação às categorias presentes nas compras, Alimentos apresentou os maiores percentuais nos três segmentos econômicos, seguida por Higiene e Limpeza. Apesar das diferenças entre os segmentos, o comportamento entre as categorias se mostrou semelhante.
+Entre as categorias analisadas, Alimentos apresentou os maiores percentuais nos três segmentos econômicos, seguida por Higiene e Limpeza. Também foi possível perceber que as mulheres representam a maior quantidade de clientes e apresentaram uma média de compras ligeiramente superior à dos homens.
 
-Também foi analisada a frequência de compras de acordo com o gênero dos clientes. As mulheres representam a maior quantidade de clientes e também apresentaram uma média de compras ligeiramente superior à dos homens.
+Durante a análise foram encontrados registros duplicados. Como a base não possui uma coluna informando a quantidade de unidades adquiridas, optei por manter esses registros, pois eles podem representar a compra de mais de uma unidade do mesmo produto.
 
-Por último, foi analisado o comportamento dos clientes de acordo com o estado civil e a presença de filhos, permitindo comparar a quantidade de clientes e a frequência média de compras entre os diferentes grupos.
 
-## Registros duplicados
+## Reflexão sobre ETL e qualidade dos dados
 
-Durante a análise foram encontrados registros duplicados. Como a base não possui uma coluna específica informando a quantidade de unidades adquiridas em cada compra, optei por manter esses registros, pois eles podem representar a compra de mais de uma unidade do mesmo produto.
+Durante o desenvolvimento do projeto foi possível perceber a importância das etapas de ETL para preparar os dados antes da realização das análises. A extração ocorreu através da leitura do arquivo CSV, seguida pela transformação dos dados através da padronização das colunas, tratamento de valores ausentes, conversão dos tipos e análise das duplicidades.
 
-## Arquivos do projeto
+Também foi possível perceber que a qualidade dos dados interfere diretamente nos resultados obtidos. Antes dos agrupamentos e cálculos estatísticos, foi necessário verificar possíveis inconsistências e entender as informações presentes na base, evitando que problemas nos dados interferissem nas conclusões da análise.
 
-- `miniprojeto.ipynb` - Notebook utilizado durante o desenvolvimento e análise dos dados.
-- `miniprojeto.py` - Script Python contendo a lógica desenvolvida no projeto.
-- `README.md` - Descrição do projeto e instruções para execução.
 
 ## Como executar
 
-Para executar o projeto, é necessário possuir o Python e as bibliotecas utilizadas instaladas.
+Os principais arquivos do projeto são:
 
-O arquivo pode ser aberto no VS Code e executado através do seguinte comando:
+- `miniprojeto.ipynb` - Notebook utilizado durante o desenvolvimento e análise dos dados.
+- `miniprojeto.py` - Script Python contendo a lógica desenvolvida no projeto.
+
+Para executar o script, é necessário possuir o Python e as bibliotecas utilizadas instaladas. A base de dados deve estar no mesmo diretório do arquivo Python.
+
+No terminal do VS Code, execute:
 
     python miniprojeto.py
-
-A base de dados utilizada deve estar disponível no mesmo diretório do arquivo Python para que a leitura dos dados seja realizada corretamente.
-
-## Considerações finais
-
-O desenvolvimento deste miniprojeto permitiu aplicar os conhecimentos estudados durante o curso em uma base de dados com grande quantidade de registros. Além da preparação e tratamento dos dados, as análises realizadas permitiram identificar características dos clientes e diferenças no comportamento de compra entre os grupos analisados.
