@@ -100,6 +100,10 @@ if (datas_por_compra > 1).any():
 else:
     print("Cada identificador de compra possui uma única data!")
 
+# %% [markdown]
+##Insight:
+#Durante a validação da coluna co_id, foram encontradas 18.471 compras únicas, quantidade diferente das 50.000 compras informadas na documentação da base. Foram verificadas possíveis inconsistências nos identificadores e também a relação entre compra, data e produtos. Apesar das verificações realizadas, não foi possível identificar uma informação na base que explique essa diferença.
+
 # %%
 # Removendo coluna vazia
 
